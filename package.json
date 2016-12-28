@@ -1,6 +1,6 @@
 {
   "name": "bluebird-decorator",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "An ES7 decorator for ensuring that every Promise returned by a function is a Bluebird instance.",
   "author": "Luke Horvat",
   "license": "MIT",
