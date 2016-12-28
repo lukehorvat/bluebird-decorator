@@ -1,0 +1,49 @@
+{
+  "name": "bluebird-decorator",
+  "version": "0.0.0",
+  "description": "",
+  "author": "Luke Horvat",
+  "license": "MIT",
+  "repository": "lukehorvat/bluebird-decorator",
+  "main": "dist",
+  "scripts": {
+    "build": "node_modules/.bin/babel lib -d dist -q",
+    "prebuild": "node_modules/.bin/rimraf dist",
+    "precommit": "npm test",
+    "prepush": "npm test",
+    "prepublish": "npm test && npm run build",
+    "test": "node_modules/.bin/mocha --compilers js:babel-register"
+  },
+  "dependencies": {
+    "decorator-utils": "2.0.0"
+  },
+  "devDependencies": {
+    "babel-cli": "6.18.0",
+    "babel-plugin-transform-decorators-legacy": "1.3.4",
+    "babel-preset-es2015": "6.18.0",
+    "babel-register": "6.18.0",
+    "bluebird": "3.4.7",
+    "husky": "0.12.0",
+    "mocha": "3.2.0",
+    "rimraf": "2.5.4",
+    "should": "11.1.2"
+  },
+  "peerDependencies": {
+    "bluebird": ">= 3.0.0"
+  },
+  "keywords": [
+    "decorator",
+    "annotation",
+    "bluebird",
+    "promise",
+    "async"
+  ],
+  "babel": {
+    "plugins": [
+      "transform-decorators-legacy"
+    ],
+    "presets": [
+      "es2015"
+    ]
+  }
+}
